@@ -40,6 +40,26 @@ class CategoryController extends Controller
         return (new CategoryResource($category))->additional(['message' => 'Hiển thị dữ liệu thành công!']);
     }
 
+    $category = Category::create($data);
+
+    return (new CategoryResource($category))->additional(['message' => 'Thêm danh mục thành công!']);
+}
+
+public function show(string $id)
+{
+    $category = Category::findOrFail($id);
+
+    $category = Category::create($data);
+
+    return (new CategoryResource($category))->additional(['message' => 'Thêm danh mục thành công!']);
+}
+
+public function show(string $id)
+{
+    $category = Category::findOrFail($id);
+
+    return (new 
+    return (new 
 
     public function update(Request $request, string $id)
     {
